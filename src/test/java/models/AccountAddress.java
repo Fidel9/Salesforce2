@@ -6,12 +6,15 @@ public class AccountAddress {
     String addressEnter;
     String shippingAddress;
     String billingStreet;
+    String billingCity;
 
-    public AccountAddress(String billingAddress, String shippingAddress,String billingStreet,String addressEnter) {
+    public AccountAddress(String billingAddress, String shippingAddress,String billingStreet,
+                          String addressEnter,String billingCity) {
         this.billingAddress = billingAddress;
         this.shippingAddress = shippingAddress;
         this.billingAddress = billingStreet;
         this.addressEnter = addressEnter;
+        this.billingCity = billingCity;
     }
 
     public String getBillingAddress() {
@@ -41,8 +44,15 @@ public class AccountAddress {
     public String getAddressEnter() {
         return addressEnter;
     }
-
     public void setAddressEnter(String addressEnter) {
         this.addressEnter = addressEnter;
+    }
+
+    public String getBillingCity() {
+        return billingCity;
+    }
+
+    public void setBillingCity(String billingCity) {
+        this.billingCity = billingCity;
     }
 }

@@ -11,8 +11,9 @@ public class Input {
     String inputEmployees = "//input[@data-aura-class='uiInputSmartNumber']";
 
     String inputBillingAddress = "//span[@class='searchLabel']";
-    String closeBillingAddress = "//button[@title='Close']";
+    String closeBillingAddress = "//button[@title='Close this window']";
     String inputBillingStreet = "//textarea[@placeholder='Billing Street']";
+    String inputBillingCity = "//input[@class='city compoundBorderBottom compoundBorderRight input']";
 
 
     WebDriver driver;
@@ -28,16 +29,16 @@ public class Input {
         driver.findElement(By.xpath(String.format(inputLocator, this.label))).sendKeys(text);
     }
 
-    public void write2(String text) {
+    public void writeTextarea(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputTextarea, this.label))).sendKeys(text);
     }
 
-    public void write3(String text) {
+    public void writeEmployees(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputEmployees, this.label))).sendKeys(text);
     }
-    public void write4(String text) {
+    public void writeBillingAddress(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputBillingAddress, this.label))).click();
     }
@@ -45,12 +46,16 @@ public class Input {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputBillingAddress, this.label))).sendKeys();
     }
-    public void write6(String text) {
+    /*public void write6(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(closeBillingAddress, this.label))).click();
-    }
-    public void write5(String text) {
+    }*/
+    public void writeBillingStreet(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputBillingStreet, this.label))).sendKeys(text);
+    }
+    public void writeBillingCity(String text) {
+        System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
+        driver.findElement(By.xpath(String.format(inputBillingCity, this.label))).sendKeys(text);
     }
 }

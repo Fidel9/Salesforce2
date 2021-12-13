@@ -22,15 +22,16 @@ public class AccountModalPage extends BasePage {
     public AccountDetailsPage create(Account account, AccountAddress account2) {
         new Input(driver, "Account Name").write(account.getAccountName());
         new Input(driver, "Website").write(account.getWebSite());
-        new Input(driver, "Description").write2(account.getDescription());
+        new Input(driver, "Description").writeTextarea(account.getDescription());
         new Input(driver, "Phone").write(account.getPhone());
-        new Input(driver, "Employees").write3(account.getEmployees());
+        new Input(driver, "Employees").writeEmployees(account.getEmployees());
         new DropDown(driver, "Type").selectOption(account.getType());
         new DropDown(driver, "Industry").selectOption(account.getIndustry());
 
-        new Input(driver, "Billing Address").write4(account2.getBillingAddress());
+        new Input(driver, "Billing Address").writeBillingAddress(account2.getBillingAddress());
         new Input(driver, "Enter Address").writeInputEnterAddress(account2.getAddressEnter());
-        new Input(driver, "Billing Street").write5(account2.getBillingStreet());
+        new Input(driver, "Billing Street").writeBillingStreet(account2.getBillingStreet());
+        new Input(driver, "Billing City").writeBillingCity(account2.getBillingCity());
 
         return clickSave();
     }

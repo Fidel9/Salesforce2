@@ -25,7 +25,7 @@ public class AccountTest extends BaseTest {
                 "new account description.", "123-456", "1", "Apparel");
 
         AccountAddress account2 = new AccountAddress("","","Chapton Street",
-                "My address");
+                "My address","Minsk");
 
         boolean isDetailsPaigeOpen = accountModalPage
                 .create(account,account2)
@@ -43,6 +43,7 @@ public class AccountTest extends BaseTest {
         assertEquals(accountDetailsPage.getFieldValueByName("Billing Address"), account2.getBillingAddress(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Billing Street"), account2.getBillingStreet(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Enter Address "), account2.getAddressEnter(), "");
+        assertEquals(accountDetailsPage.getFieldValueByName("Billing City"), account2.getBillingCity(), "");
 
 
         System.out.println("!");
