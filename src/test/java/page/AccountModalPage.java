@@ -29,7 +29,7 @@ public class AccountModalPage extends BasePage {
         new DropDown(driver, "Industry").selectOption(account.getIndustry());
 
         new Input(driver, "Billing Address").write4(account2.getBillingAddress());
-        new Input(driver, "Address enter").write6(account2.getAddressEnter());
+        new Input(driver, "Enter Address").writeInputEnterAddress(account2.getAddressEnter());
         new Input(driver, "Billing Street").write5(account2.getBillingStreet());
 
         return clickSave();

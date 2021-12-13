@@ -1,5 +1,7 @@
 package tests;
 
+import models.Account;
+import models.AccountAddress;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -37,6 +39,11 @@ public class AccountTest extends BaseTest {
         assertEquals(accountDetailsPage.getFieldValueByName("Phone"), account.getPhone(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Employees"), account.getEmployees(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Industry"), account.getIndustry(), "");
+
+        assertEquals(accountDetailsPage.getFieldValueByName("Billing Address"), account2.getBillingAddress(), "");
+        assertEquals(accountDetailsPage.getFieldValueByName("Billing Street"), account2.getBillingStreet(), "");
+        assertEquals(accountDetailsPage.getFieldValueByName("Enter Address "), account2.getAddressEnter(), "");
+
 
         System.out.println("!");
     }

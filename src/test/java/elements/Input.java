@@ -41,12 +41,16 @@ public class Input {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputBillingAddress, this.label))).click();
     }
+    public void writeInputEnterAddress(String text) {
+        System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
+        driver.findElement(By.xpath(String.format(inputBillingAddress, this.label))).sendKeys();
+    }
     public void write6(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(closeBillingAddress, this.label))).click();
     }
     public void write5(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
-        driver.findElement(By.xpath(String.format(inputBillingStreet, this.label))).sendKeys();
+        driver.findElement(By.xpath(String.format(inputBillingStreet, this.label))).sendKeys(text);
     }
 }
