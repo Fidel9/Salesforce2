@@ -11,6 +11,8 @@ public class Account {
     String industry;
 
 
+
+
     public Account(String accountName, String webSite, String type, String description, String phone,
                    String employees, String industry) {
         this.accountName = accountName;
@@ -20,6 +22,8 @@ public class Account {
         this.phone = phone;
         this.employees = employees;
         this.industry = industry;
+
+
     }
 
     public String getAccountName() {
@@ -77,5 +81,6 @@ public class Account {
     public void setIndustry(String industry) {
         this.industry = industry;
     }
+
 }
 
