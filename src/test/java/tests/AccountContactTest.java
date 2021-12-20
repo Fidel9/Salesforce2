@@ -20,8 +20,8 @@ public class AccountContactTest extends  BaseTest{
                 .isPageOpen2();
         assertFalse(isAccountContactModalOpen, "папап не открыт");
 
-        AccountContact accountContact = new AccountContact("Mr.", "Chad", "Ivanov","AccountTest",
-                "www.onliner.by","+375 25 544 44 44");
+        AccountContact accountContact = new AccountContact("Mr.", "Irvin", "Ivanov","AccountTest",
+                "onliner@yandex.ru","+375 25 544 44 44");
 
 
         boolean isDetailsContactPageOpen = accountContactModalPage

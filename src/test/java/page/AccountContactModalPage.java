@@ -26,8 +26,8 @@ public class AccountContactModalPage extends BasePage {
     public AccountContactDetailsPage create(AccountContact accountContact) {
         new InputContact(driver,"First Name").writeFirstName(accountContact.getFirstName());
         new InputContact(driver,"Last Name").writeLastName(accountContact.getLastName());
-        new InputContact(driver,"Account Name").writeAccountContactName(accountContact.getAccountName());
         new DropDownContact(driver, "Salutation").selectOption2(accountContact.getSalutation());
+        new DropDownContact(driver,"Account Name").selectOption3(accountContact.getSalutation());
         new InputContact(driver,"Email").writeEmailContact(accountContact.getEmailContact());
         new  InputContact(driver,"Phone").writePhoneNumberContact(accountContact.getPhoneNumberContact());
 

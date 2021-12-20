@@ -4,13 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class InputContact {
-    // String accountContactName = "//div[contains(@class, 'modal-body')]//span[text()='%s']/ancestor::div[contains(@class, 'uiInput')]//input";
-    // String inputFieldContact = "//*[@type='text']";
     String firstName = "//input[@name='firstName']";
     String lastName = "//input[@placeholder='Last Name']";
-
-    String accountContactName = "//label[text()='%s']/ancestor::div[contains(@class, 'slds-is-open')]//input";
-
     String emailContact = "//input[@inputmode='email']";
     String phoneNumberContact = "//input[@name='Phone']";
 
@@ -22,10 +17,6 @@ public class InputContact {
         this.label = label;
     }
 
-    /* public void writeContact(String text) {
-         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
-         driver.findElement(By.xpath(String.format(inputFieldContact, this.label))).sendKeys(text);
-     }*/
     public void writeFirstName(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(firstName, this.label))).sendKeys(text);
@@ -34,11 +25,6 @@ public class InputContact {
     public void writeLastName(String text) {
         System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(lastName, this.label))).sendKeys(text);
-    }
-
-    public void writeAccountContactName(String text) {
-        System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
-        driver.findElement(By.xpath(String.format(accountContactName, this.label))).sendKeys(text);
     }
 
     public void writeEmailContact(String text) {
