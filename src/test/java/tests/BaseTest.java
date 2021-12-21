@@ -6,10 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import page.*;
 
 import java.util.concurrent.TimeUnit;
 
+@Listeners(TestListener.class)
 public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
@@ -17,6 +19,11 @@ public class BaseTest {
     AccountListPage accountListPage;
     AccountModalPage accountModalPage;
     AccountDetailsPage accountDetailsPage;
+
+    AccountContactListPage accountContactListPage;
+    AccountContactModalPage accountContactModalPage;
+    AccountContactDetailsPage accountContactDetailsPage;
+
 
     @BeforeMethod
     public void setup() {
@@ -31,12 +38,16 @@ public class BaseTest {
         accountListPage = new AccountListPage(driver);
         accountModalPage = new AccountModalPage(driver);
         accountDetailsPage = new AccountDetailsPage(driver);
+
+        accountContactListPage = new AccountContactListPage(driver);
+        accountContactModalPage = new AccountContactModalPage(driver);
+        accountContactDetailsPage = new AccountContactDetailsPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
-        //driver.quit();
+        driver.quit();
     }
 }
 

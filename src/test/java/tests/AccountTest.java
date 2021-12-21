@@ -1,5 +1,6 @@
 package tests;
 
+import models.Account;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
@@ -22,11 +23,9 @@ public class AccountTest extends BaseTest {
         Account account = new Account("TestAccountName", "www.onliner.by", "Investor",
                 "new account description.", "123-456", "1", "Apparel");
 
-        AccountAddress account2 = new AccountAddress("","","Chapton Street",
-                "My address");
 
         boolean isDetailsPaigeOpen = accountModalPage
-                .create(account,account2)
+                .create(account)
                 .isPageOpen();
         assertTrue(isDetailsPaigeOpen, "Не открывается");
 
@@ -37,6 +36,7 @@ public class AccountTest extends BaseTest {
         assertEquals(accountDetailsPage.getFieldValueByName("Phone"), account.getPhone(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Employees"), account.getEmployees(), "");
         assertEquals(accountDetailsPage.getFieldValueByName("Industry"), account.getIndustry(), "");
+
 
         System.out.println("!");
     }

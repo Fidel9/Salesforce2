@@ -3,7 +3,7 @@ package page;
 import elements.DropDown;
 import elements.Input;
 import models.Account;
-import models.AccountAddress;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,18 +19,20 @@ public class AccountModalPage extends BasePage {
         return isExist(MODAL_TITLE);
     }
 
-    public AccountDetailsPage create(Account account, AccountAddress account2) {
+    @Override
+    public boolean isPageOpen2() {
+        return false;
+    }
+
+    public AccountDetailsPage create(Account account) {
         new Input(driver, "Account Name").write(account.getAccountName());
         new Input(driver, "Website").write(account.getWebSite());
-        new Input(driver, "Description").write2(account.getDescription());
+        new Input(driver, "Description").writeTextarea(account.getDescription());
         new Input(driver, "Phone").write(account.getPhone());
-        new Input(driver, "Employees").write3(account.getEmployees());
+        new Input(driver, "Employees").writeEmployees(account.getEmployees());
         new DropDown(driver, "Type").selectOption(account.getType());
         new DropDown(driver, "Industry").selectOption(account.getIndustry());
 
-        new Input(driver, "Billing Address").write4(account2.getBillingAddress());
-        new Input(driver, "Address enter").write6(account2.getAddressEnter());
-        new Input(driver, "Billing Street").write5(account2.getBillingStreet());
 
         return clickSave();
     }
