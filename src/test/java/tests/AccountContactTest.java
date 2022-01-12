@@ -12,7 +12,7 @@ public class AccountContactTest extends  BaseTest{
     public void accountShouldBeCreated() {
         loginPage
                 .open()
-                .login("llev7208-1q4u@force.com", "Bobruisk2021");
+                .login("llev7208-gnwy@force.com", "Bobruisk2021");
 
         boolean isAccountContactModalOpen = accountContactListPage
                 .open()
@@ -21,7 +21,7 @@ public class AccountContactTest extends  BaseTest{
         assertFalse(isAccountContactModalOpen, "папап не открыт");
 
         AccountContact accountContact = new AccountContact("Mr.", "Irvin", "Ivanov","AccountTest",
-                "onliner@yandex.ru","+375 25 544 44 44");
+                "ivan555@mailinator.com","+375 25 544 44 44");
 
 
         boolean isDetailsContactPageOpen = accountContactModalPage

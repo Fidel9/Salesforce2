@@ -1,5 +1,6 @@
 package page;
 
+import models.Account;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -15,6 +16,7 @@ public class AccountContactDetailsPage extends BasePage{
     public boolean isPageOpen2() {
         return isExist(DETAILS_LINK_2);
     }
+
 
     @Override
     public boolean isPageOpen() {

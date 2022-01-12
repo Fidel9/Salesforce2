@@ -1,5 +1,6 @@
 package page;
 
+import models.Account;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -19,6 +20,7 @@ public class AccountListPage extends BasePage {
     public boolean isPageOpen2() {
         return false;
     }
+
 
     public AccountListPage open() {
         driver.get(BASE_URL + "/lightning/o/Account/list");

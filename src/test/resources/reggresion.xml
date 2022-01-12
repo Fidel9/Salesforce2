@@ -10,7 +10,7 @@
     </test> <!-- Test -->
     <test name="test 2">
         <classes>
-            <class name="tests.AccountContactTest"/>
+            <class name="tests.CarTest"/>
 
         </classes>
     </test> <!-- Test -->

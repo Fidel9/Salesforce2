@@ -2,6 +2,7 @@ package page;
 
 import elements.DropDownContact;
 import elements.InputContact;
+import models.Account;
 import models.AccountContact;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,7 @@ public class AccountContactModalPage extends BasePage {
     public boolean isPageOpen2() {
         return isExist(MODAL_TITLE_2);
     }
+
 
     public AccountContactDetailsPage create(AccountContact accountContact) {
         new InputContact(driver,"First Name").writeFirstName(accountContact.getFirstName());

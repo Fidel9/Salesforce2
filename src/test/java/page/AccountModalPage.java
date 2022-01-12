@@ -24,6 +24,8 @@ public class AccountModalPage extends BasePage {
         return false;
     }
 
+
+
     public AccountDetailsPage create(Account account) {
         new Input(driver, "Account Name").write(account.getAccountName());
         new Input(driver, "Website").write(account.getWebSite());
