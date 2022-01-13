@@ -12,7 +12,7 @@ public class AccountFactory {
         log.debug("Создается обьект Account");
         return Account.builder()
                 .accountName(faker.name().name())
-                .webSite("www.onliner.by")
+                .webSite(faker.internet().url())
                 .type("Investor")
                 .description("new account description.")
                 .phone(faker.phoneNumber().cellPhone())

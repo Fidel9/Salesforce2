@@ -27,14 +27,8 @@ public class AccountTest extends BaseTest {
        /* Account account = new Account("TestAccountName", "www.onliner.by", "Investor",
                 "new account description.", "123-456", "1", "Apparel");*/
 
-        Account account = new AccountFactory().get();
-        account.setAccountName("TestAccountName");
-        account.setWebSite("www.onliner.by");
-        account.setType("Investor");
-        account.setDescription("new account description.");
-        account.setPhone("123-456");
-        account.setEmployees("1");
-        account.setIndustry("Apparel");
+        Account account =  new AccountFactory().get();
+
 
 
         boolean isDetailsPaigeOpen = accountModalPage
