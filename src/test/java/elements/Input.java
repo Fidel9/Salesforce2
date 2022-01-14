@@ -31,7 +31,7 @@ public class Input {
     }
 
     public void writeEmployees(String text) {
-        System.out.printf("Writing text '%s' into input with label '%s'", text, this.label);
+        log.debug("Writing text '%s' into input with label '%s'", text, this.label);
         driver.findElement(By.xpath(String.format(inputEmployees, this.label))).sendKeys(text);
     }
 

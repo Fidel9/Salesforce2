@@ -34,6 +34,7 @@ public class LoginPage extends BasePage {
 
     public HomePage login(String userName, String password) {
         log.info("В элемент USERNAME_INPUT будет добавлен имя пользователя");
+        log.info("В элемент PASSWORD_INPUT будет добавлен имя пользователя");
         driver.findElement(USERNAME_INPUT).sendKeys(userName);
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
         driver.findElement(LOGIN_BUTTON).click();
